@@ -103,7 +103,7 @@ def main():
             print(arr())
 
         elif op == 3:
-            print('EM DESENVOLVIMENTO...')
+            print(combComp())
 
         elif op == 4:
             print(permRept())
@@ -111,7 +111,7 @@ def main():
         elif op == 5:
             print(desarr())
 
-    elif area == 3:
+    elif area == 3: # FUNÇÕES
         cabec('ESCOLHA O GRAU DA FUNÇÃO')
         get_option(func)
 

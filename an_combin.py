@@ -31,7 +31,7 @@ def arr():
     return f'RESULTADO: {int(a)}'
 
 def combComp():
-    return "MAIS DIFÍCIL E EU NÃO PROGRAMEI AINDA. FAÇA NA MÃO rsrs"
+    return "EM DESENVOLVIMENTO..."
 
 def permRept():
     total = 1
