@@ -46,4 +46,10 @@ def permRept():
     return f'RESULTADO: {int(r)}'
 
 def desarr():
-    return "AINDA TO PROGRAMANDO. FAÇA NA MÃO rsrs"
+    v = 0
+    n = int(input("Dessaranjo de quantos elementos? "))
+    
+    for i in range(n+1):
+        v += factorial(n) * (((-1)**i)/factorial(i))
+    
+    return(v)

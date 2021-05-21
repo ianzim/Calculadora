@@ -109,7 +109,7 @@ def main():
             print(permRept())
         
         elif op == 5:
-            print('EM DESENVOLVIMENTO...')
+            print(desarr())
 
     elif area == 3:
         cabec('ESCOLHA O GRAU DA FUNÇÃO')
