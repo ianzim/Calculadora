@@ -3,7 +3,6 @@ from random import *
 from numpy import * 
 from mat_basica import *
 from geom import *
-from time import sleep
 import os
 from an_combin import *
 unidades = ('km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm')
@@ -112,8 +111,7 @@ def main():
             print(desarr())
 
     elif area == 3: # FUNÇÕES
-        cabec('ESCOLHA O GRAU DA FUNÇÃO')
-        get_option(func)
+        print("EM DESENVOLVIMENTO")
 
 
 

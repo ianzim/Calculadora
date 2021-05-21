@@ -31,7 +31,13 @@ def arr():
     return f'RESULTADO: {int(a)}'
 
 def combComp():
-    return "EM DESENVOLVIMENTO..."
+    n = int(input("Quantas opções podem ser escolhidas? "))
+    p = int(input(f"Quantos itens das {n} opções devem ser escolhidos? "))
+    num = factorial(n+p-1)
+    den = factorial(p) * factorial(n-1)
+    r = num/den
+
+    return f"RESULTADO: {int(r)}"
 
 def permRept():
     total = 1
@@ -52,4 +58,4 @@ def desarr():
     for i in range(n+1):
         v += factorial(n) * (((-1)**i)/factorial(i))
     
-    return(v)
+    return(int(v))
