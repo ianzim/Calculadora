@@ -9,7 +9,7 @@ unidades = ('km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm')
 
 
 operations_types = ('MATEMÁTICA BÁSICA', 'GEOMETRIA',
-                    'ANÁLISE COMBINATÓRIA', 'FUNÇÕES')
+                    'ANÁLISE COMBINATÓRIA')
 
 mat_basica = ('SOMA', 'SUBTRAÇÃO', 'MULTIPLICAÇÃO',
               'DIVISÃO', 'POTENCIAÇÃO', 'RADICIAÇÃO', 'FÓRMULA DE BÁSKHARA')
@@ -17,7 +17,7 @@ geom = ('DADOS DE CÍRCULOS', 'DADOS DE CILINDROS',
         'DADOS DE PIRÂMIDES REGULARES', 'DADOS DE CONES', 'DADOS DE CUBOS', 'DADOS DE ESFERAS')
 analise_comb = ('FATORIAL', 'COMBINAÇÃO', 'ARRANJO',
                 'COMBINAÇÃO COMPLETA', 'PERMUTAÇÃO COM REPETIÇÃO', 'DESARRANJO')
-func = ('PRIMEIRO GRAU', 'SEGUNDO GRAU')
+#func = ('PRIMEIRO GRAU', 'SEGUNDO GRAU')
 
 
 def cabec(txt):
@@ -110,8 +110,8 @@ def main():
         elif op == 5:
             print(desarr())
 
-    elif area == 3: # FUNÇÕES
-        print("EM DESENVOLVIMENTO")
+    # elif area == 3: # FUNÇÕES
+    #     print("EM DESENVOLVIMENTO")
 
 
 
