@@ -50,9 +50,9 @@ def rad():
 
 def baskhara():
     print()
-    a = int(input('A = '))
-    b = int(input('B = '))
-    c = int(input('C = '))
+    a = float(input('A = '))
+    b = float(input('B = '))
+    c = float(input('C = '))
 
     delta = (b**2 - (4 * a * c))
     rD = delta**(1/2)
@@ -64,4 +64,4 @@ def baskhara():
         return 'A RAÍZ DE DELTA É NEGATIVA'
 
     else:
-        return f'X1 = {x1:.5f}\nX2 = {x2:.5f}'
+        return f'X1 = {x1:.2f}\nX2 = {x2:.2f}'
