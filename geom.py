@@ -216,13 +216,13 @@ def esf():
         cabec("ESCOLHA O DADO DA SECÇÃO")
         inf_possiveis = ['ÁREA DA SECÇÃO','DISTÂNCIA DO CENTRO', 'RAIO DA SECÇÃO', 'RAIO DA ESFERA']
         op = get_option(inf_possiveis)
-        if op == 0:
+        if op == 0: 
             r1 = float(input("Raio da esfera: "))
             d = float(input("Distância do centro em que foi realizada a secção: "))
             r2 = sqrt(r1**2 - d**2)
             return f'RESULTADO: {pi*(r2**2):.2f}'
         
-        elif op == 1:
+        elif op == 1: 
             r1 = float(input("Raio da esfera: "))
             try:
                 a = float(input("Área da secção: "))
@@ -230,10 +230,10 @@ def esf():
             except ValueError:
                 a = 0
                 r2 = float(input("Raio da secção: "))
-            else:
-                return f'RESULTADO: {sqrt(r1**2 - r2**2):.2f}'
+            
+            return f'RESULTADO: {sqrt(r1**2 - r2**2):.2f}'
         
-        elif op == 2:
+        elif op == 2: 
             r1 = float(input("Raio da esfera: "))
             d = float(input("Distância do centro em que a secção foi feita: "))
             return f'RESULTADO: {sqrt(r1**2 - d**2):.2f}'
@@ -245,15 +245,15 @@ def esf():
                 r2 = sqrt(a/pi)
             except:
                 r2 = float(input("Raio da secção: "))
-            else:
-                return f'{(d**2 + r2**2):.2f}'
+            
+            return f'{sqrt(d**2 + r2**2):.2f}'
         
     elif op == 5:
         a = float(input("Ângulo deslocado que formou o fuso: "))
         r = float(input("Raio da esfera: "))
-        return f'RESULTADO: {(a/90)*pi*(r**2)}'
+        return f'RESULTADO: {(a/90)*pi*(r**2):.2f}'
 
     elif op == 6:
         a = float(input("Ângulo deslocado que formou a cunha: "))
         r = float(input("Raio da esfera: "))
-        return f'RESULTADO: {(a/270)*pi*(r**3)}'
+        return f'RESULTADO: {(a/270)*pi*(r**3):.2f}'
