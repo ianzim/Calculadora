@@ -5,7 +5,7 @@ cilindro = ['ALTURA', 'RAIO', 'VOLUME', 'ÁREA TOTAL', 'ÁREA LATERAL']
 piram = ['ALTURA', 'ÁREA TOTAL', 'VOLUME', 'VOLUME DO TRONCO']
 con = ['ALTURA', 'ÁREA TOTAL', 'GERATRIZ', 'VOLUME', 'ÁREA LATERAL']
 cub = ['MEDIDA DO LADO', 'VOLUME', 'DIAGONAL INTERNA', 'DIAGONAL DA FACE']
-esfera = ['ÁREA DA SUPERFÍCIE', 'VOLUME', 'ÁREA DA SUPERFÍCIE DA SEMIESFERA', 'VOLUME DA SEMIESFERA']
+esfera = ['ÁREA DA SUPERFÍCIE', 'VOLUME', 'ÁREA DA SUPERFÍCIE DA SEMIESFERA', 'VOLUME DA SEMIESFERA', 'SECÇÃO', 'FUSO', 'CUNHA']
 
 def get_option(tupla):
     for i, v in enumerate(tupla):
@@ -211,3 +211,49 @@ def esf():
     elif op == 3:
         r = float(input('Digite o raio da esfera: '))
         return f'RESULTADO: {4/6*pi*(r**3):.2f}'
+    
+    elif op == 4:
+        cabec("ESCOLHA O DADO DA SECÇÃO")
+        inf_possiveis = ['ÁREA DA SECÇÃO','DISTÂNCIA DO CENTRO', 'RAIO DA SECÇÃO', 'RAIO DA ESFERA']
+        op = get_option(inf_possiveis)
+        if op == 0:
+            r1 = float(input("Raio da esfera: "))
+            d = float(input("Distância do centro em que foi realizada a secção: "))
+            r2 = sqrt(r1**2 - d**2)
+            return f'RESULTADO: {pi*(r2**2):.2f}'
+        
+        elif op == 1:
+            r1 = float(input("Raio da esfera: "))
+            try:
+                a = float(input("Área da secção: "))
+                r2 = sqrt(a/pi)
+            except ValueError:
+                a = 0
+                r2 = float(input("Raio da secção: "))
+            else:
+                return f'RESULTADO: {sqrt(r1**2 - r2**2):.2f}'
+        
+        elif op == 2:
+            r1 = float(input("Raio da esfera: "))
+            d = float(input("Distância do centro em que a secção foi feita: "))
+            return f'RESULTADO: {sqrt(r1**2 - d**2):.2f}'
+        
+        elif op == 3:
+            d = float(input("Distância do centro em que a secção foi feita: "))
+            try:
+                a = float(input("Área da secção: "))
+                r2 = sqrt(a/pi)
+            except:
+                r2 = float(input("Raio da secção: "))
+            else:
+                return f'{(d**2 + r2**2):.2f}'
+        
+    elif op == 5:
+        a = float(input("Ângulo deslocado que formou o fuso: "))
+        r = float(input("Raio da esfera: "))
+        return f'RESULTADO: {(a/90)*pi*(r**2)}'
+
+    elif op == 6:
+        a = float(input("Ângulo deslocado que formou a cunha: "))
+        r = float(input("Raio da esfera: "))
+        return f'RESULTADO: {(a/270)*pi*(r**3)}'
